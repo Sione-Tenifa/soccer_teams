@@ -1,0 +1,27 @@
+<h2 class="center">Teams</h2>
+<hr />
+<div class="row">
+  <div class="col s12 m6">
+    <ul id="teams-list">
+      <button class="btn" id="toggle">Show Form</button>
+      <% @teams.each do |team| %>
+        <li
+          class="team-item"
+          data-id=<%= team.id %>
+          data-name="<%= team.name %>"
+        >
+          <%= team.name %> - <%= team.description %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col s12 m6" id="player-list">
+    <h3 id="team">Players on Team</h2>
+    <ul id="players">
+    </ul>
+  </div>
+</div>
+
+
+
+
